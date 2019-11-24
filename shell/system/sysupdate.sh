@@ -14,5 +14,7 @@ export TERM=xterm-256color
 # http://serverfault.com/questions/227190/how-do-i-ask-apt-get-to-skip-any-interactive-post-install-configuration-steps
 export DEBIAN_FRONTEND=noninteractive
 
+date
 apt-get --assume-yes update
 apt-get --assume-yes upgrade
+date
