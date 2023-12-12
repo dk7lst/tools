@@ -4,9 +4,9 @@
 # Inspired by https://gist.github.com/MurzNN/ee64f98ab2e71b886c41d55594e5dd9e
 
 # URLs:
-# - https://github.com/vector-im/element-web
-# - https://github.com/vector-im/element-web/releases
-# - https://github.com/vector-im/element-web/releases/latest
+# - https://github.com/element-hq/element-web
+# - https://github.com/element-hq/element-web/releases
+# - https://github.com/element-hq/element-web/releases/latest
 
 # Change to a safe location and don't clutter CWD in case anything goes wrong:
 cd /tmp
@@ -20,7 +20,7 @@ CONFIGFILE=/etc/element-config.json
 # Directory for temp files - must be different than install directory!
 DIRECTORY_TMP=/tmp
 
-VERSION_URL=https://api.github.com/repos/vector-im/element-web/releases/latest
+VERSION_URL=https://api.github.com/repos/element-hq/element-web/releases/latest
 
 command -v curl >/dev/null 2>&1 || { echo "You need to install "curl" package for this script: sudo apt install curl"; exit 1; }
 command -v tar >/dev/null 2>&1 || { echo "You need to install "tar" package for this script: sudo apt install tar"; exit 1; }
