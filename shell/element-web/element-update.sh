@@ -69,7 +69,7 @@ if ( [ "$VERSION_INSTALLED" != "$VERSION_LATEST" ] ); then
   mv $DIRECTORY_TMP/element-latest.tar.gz.asc .
 
   tar xzf element-latest.tar.gz --strip-components=1
-  chown -R root.root .
+  chown -R root:root .
   ln -s $CONFIGFILE config.json
 
   echo "Config diff:"
