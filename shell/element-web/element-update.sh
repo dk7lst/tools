@@ -26,7 +26,8 @@ command -v curl >/dev/null 2>&1 || { echo "You need to install "curl" package fo
 command -v tar >/dev/null 2>&1 || { echo "You need to install "tar" package for this script: sudo apt install tar"; exit 1; }
 command -v jq >/dev/null 2>&1 || { echo "You need to install "jq" package for this script: sudo apt install jq"; exit 1; }
 
-VERSION_LATEST=`curl -s $VERSION_URL | jq -r '.name' | sed s/v//` || { echo "Error checking last Element version!"; exit 1; }
+#VERSION_LATEST=`curl -s $VERSION_URL | jq -r '.name' | sed s/v//` || { echo "Error checking last Element version!"; exit 1; }
+VERSION_LATEST=`curl -s $VERSION_URL | jq -r '.name'` || { echo "Error checking last Element version!"; exit 1; }
 
 if ( [[ -z "$VERSION_LATEST" ]] || [ "$VERSION_LATEST" == "null" ] ); then
   echo "Error! Received bad version number from $VERSION_URL: $VERSION_LATEST"
